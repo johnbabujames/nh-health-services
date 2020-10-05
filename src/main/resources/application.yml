@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: employee-service
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+    initialization-mode: always
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    generate-ddl: false
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace
